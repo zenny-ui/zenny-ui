@@ -2,8 +2,8 @@ import { variant } from "styled-system";
 
 export enum AppearanceProp {
   // Brand styles
-  PRIMARY = "xs",
-  SECONDARY = "small",
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
   // State / Status styles
   SUCCESS = "success",
   MESSAGE = "message",
