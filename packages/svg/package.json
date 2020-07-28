@@ -1,0 +1,41 @@
+{
+  "name": "zenny-ui-svg",
+  "version": "0.0.0",
+  "description": "React component wrapper for SVG to provide utility props and theming",
+  "keywords": [
+    "svg",
+    "react-component",
+    "component"
+  ],
+  "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
+  "homepage": "https://github.com/whoisryosuke/zenny-ui#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whoisryosuke/zenny-ui.git"
+  },
+  "scripts": {
+    "build": "tsc -d",
+    "dev": "tsc --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/whoisryosuke/zenny-ui/issues"
+  },
+  "dependencies": {
+    "zenny-ui-box": "^0.0.0",
+    "zenny-ui-core": "^0.0.0",
+    "zenny-ui-variants": "^0.0.0"
+  },
+  "devDependencies": {
+    "react-icons": "^3.10.0"
+  }
+}
