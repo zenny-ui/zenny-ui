@@ -21,6 +21,8 @@
   },
   "exclude": [
     "node_modules",
+    "dist",
+    "lib",
     "**/*.spec.ts",
     "**/*.stories.[tj]sx",
     "**/*.test.[tj]s"
