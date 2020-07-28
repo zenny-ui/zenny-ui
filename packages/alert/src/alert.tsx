@@ -14,7 +14,6 @@ export interface StyledAlertProps
 
 const StyledAlert = styled(Box)<StyledAlertProps>(
   {
-    appearance: "none",
     fontFamily: "inherit",
     backgroundColor: "teal",
   },
@@ -27,19 +26,24 @@ export interface AlertProps {
   appearance?: AppearanceProp;
 }
 
-export const Alert = ({ icon, appearance, children }: AlertProps) => {
+export const Alert = ({
+  icon,
+  appearance = "message",
+  children,
+  ...rest
+}: AlertProps) => {
   const getStatusIcon = (name: AppearanceProp) => {
     switch (name) {
-      case AppearanceProp.DANGER:
+      case "danger":
         return DangerIcon;
 
-      case AppearanceProp.WARNING:
+      case "warning":
         return WarningIcon;
 
-      case AppearanceProp.SUCCESS:
+      case "success":
         return SuccessIcon;
 
-      case AppearanceProp.MESSAGE:
+      case "message":
         return MessageIcon;
 
       default:
@@ -50,7 +54,7 @@ export const Alert = ({ icon, appearance, children }: AlertProps) => {
   // Must return a JSX Element (meaning a function that returns component)
   const StatusIcon = icon ? () => <SVG as={icon} /> : getStatusIcon(appearance);
   return (
-    <StyledAlert>
+    <StyledAlert appearance={appearance} {...rest}>
       <StatusIcon />
       {children}
     </StyledAlert>
