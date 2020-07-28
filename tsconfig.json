@@ -6,7 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "removeComments": true,
     "strict": true,
-    "allowJs": true,
+    "allowJs": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
