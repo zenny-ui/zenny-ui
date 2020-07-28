@@ -1,6 +1,4 @@
 import React from "react";
-// Ignore because SC type pkg is broken for now
-// @ts-ignore
 import { SVG } from "../src/svg";
 import { FiArrowDownCircle } from "react-icons/fi";
 
@@ -46,4 +44,9 @@ export const ReactIconsFillColor = () => (
 // Use `stroke` prop to color icon stroke with unthemed, CSS properties
 export const ReactIconsStrokeColor = () => (
   <SVG as={FiArrowDownCircle} stroke="#984930" />
+);
+
+// Use `stroke` prop to color icon stroke with unthemed, CSS properties
+export const ReactIconsResized = () => (
+  <SVG as={FiArrowDownCircle} width="48px" height="48px" />
 );
