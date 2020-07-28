@@ -4,15 +4,15 @@ import * as React from "react";
 import styled from "styled-components";
 import {
   AppearanceProp,
-  appearanceVariants,
-  appearanceStrokeVariants,
+  appearanceFillVariants,
+  appearanceColorVariants,
 } from "zenny-ui-variants";
 import { Box, Assign, BoxOwnProps } from "zenny-ui-box";
 
 export interface SVGProps
   extends Assign<React.ComponentPropsWithRef<"svg">, BoxOwnProps> {
-  appearance: AppearanceProp;
-  strokeColor: AppearanceProp;
+  appearanceFill: AppearanceProp;
+  appearanceColor: AppearanceProp;
 }
 
 export interface SVGSizeProps {
@@ -32,4 +32,4 @@ export const SVG = styled(Box).attrs(
     width: width ?? "24px",
     height: height ?? "24px",
   })
-)<SVGProps>(appearanceVariants, appearanceStrokeVariants);
+)<SVGProps>(appearanceFillVariants, appearanceColorVariants);
