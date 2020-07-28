@@ -12,8 +12,8 @@ import {
 
 export interface ButtonProps
   extends Assign<React.ComponentPropsWithRef<"button">, BoxOwnProps> {
-  size: SizeProp;
-  appearance: AppearanceProp;
+  size?: SizeProp;
+  appearance?: AppearanceProp;
 }
 
 export const Button = styled(Box).attrs(() => ({
