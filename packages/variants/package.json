@@ -3,13 +3,10 @@
   "version": "0.0.0",
   "description": "Variant styles shared across components",
   "keywords": [
-    "css",
-    "in",
-    "js",
-    "theme",
+    "css-in-js",
+    "theming",
     "variants",
-    "styled",
-    "system"
+    "styled-system"
   ],
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
   "homepage": "https://github.com/whoisryosuke/design-systems-monorepo#readme",
