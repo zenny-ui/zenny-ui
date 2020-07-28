@@ -5,6 +5,16 @@ module.exports = {
     "@storybook/addon-actions",
     "@storybook/addon-links",
     {
+      name: "@storybook/addon-a11y",
+      options: {
+        checks: { "color-contrast": { options: { noScroll: true } } },
+        restoreScroll: true,
+      },
+    },
+    "@storybook/addon-backgrounds",
+    "@storybook/addon-storysource",
+    "@storybook/addon-viewport",
+    {
       name: "@storybook/preset-typescript",
       options: {
         tsLoaderOptions: {
