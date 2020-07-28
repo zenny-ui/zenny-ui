@@ -10,7 +10,7 @@ module.exports = {
         tsLoaderOptions: {
           configFile: path.resolve(__dirname, "../tsconfig.json"),
         },
-        include: [path.resolve(__dirname)],
+        include: [path.resolve(__dirname, "../packages/")],
       },
     },
   ],
