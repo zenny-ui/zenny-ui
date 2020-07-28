@@ -1,29 +1,23 @@
 import { variant } from "styled-system";
 
-export enum SizeProp {
-  XS = "xs",
-  SMALL = "small",
-  MEDIUM = "medium",
-  LARGE = "large",
-  XL = "xl",
-}
+export type SizeProp = "xs" | "small" | "medium" | "large" | "xl";
 
 export const sizeVariants = variant({
   prop: "size",
   variants: {
-    [SizeProp.XS]: {
+    xs: {
       fontSize: "0.75em",
     },
-    [SizeProp.SMALL]: {
+    small: {
       fontSize: "0.9em",
     },
-    [SizeProp.MEDIUM]: {
+    medium: {
       fontSize: "1em",
     },
-    [SizeProp.LARGE]: {
+    large: {
       fontSize: "1.2em",
     },
-    [SizeProp.XL]: {
+    xl: {
       fontSize: "1.5em",
     },
   },

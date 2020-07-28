@@ -1,25 +1,18 @@
 import { variant } from "styled-system";
 
-export enum AppearanceProp {
-  // Brand styles
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  // State / Status styles
-  SUCCESS = "success",
-  MESSAGE = "message",
-  WARNING = "warning",
-  DANGER = "danger",
-}
+export type BrandProp = "primary" | "secondary";
+export type StateProp = "success" | "message" | "warning" | "danger";
+export type AppearanceProp = BrandProp | StateProp;
 
 export const appearanceVariants = variant({
   prop: "appearance",
   variants: {
-    [AppearanceProp.PRIMARY]: {
+    primary: {
       color: "white",
       bg: "green",
       fill: "green",
     },
-    [AppearanceProp.SECONDARY]: {
+    secondary: {
       color: "white",
       fill: "green",
       bg: "orange",
@@ -32,11 +25,11 @@ export const appearanceVariants = variant({
 export const appearanceStrokeVariants = variant({
   prop: "strokeColor",
   variants: {
-    [AppearanceProp.PRIMARY]: {
+    primary: {
       fill: "none",
       stroke: "green",
     },
-    [AppearanceProp.SECONDARY]: {
+    secondary: {
       fill: "none",
       stroke: "orange",
     },
