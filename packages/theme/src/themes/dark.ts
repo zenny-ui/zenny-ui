@@ -18,7 +18,7 @@ export const gradients = {
   blue: `linear-gradient(180deg, #00D2FF 0%, ${colors.secondary} 100%)`,
 };
 
-const theme = {
+export const theme = {
   ...defaultTheme,
   colors,
   gradients,

@@ -1,4 +1,2 @@
-import { Box } from "zenny-ui-box";
-import { Button } from "zenny-ui-button";
-
-export { Box, Button };
+export * from "zenny-ui-box";
+export * from "zenny-ui-button";
