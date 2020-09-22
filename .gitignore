@@ -16,6 +16,7 @@
 /build
 /dist
 /packages/**/lib/
+/packages/**/dist/
 
 # misc
 .DS_Store
