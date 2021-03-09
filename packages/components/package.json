@@ -1,5 +1,5 @@
 {
-  "name": "zenny-ui-components",
+  "name": "@zenny-ui/components",
   "version": "0.0.0",
   "description": "All UI components from the Zenny UI design system",
   "keywords": [
@@ -34,7 +34,7 @@
     "url": "https://github.com/whoisryosuke/design-systems-monorepo/issues"
   },
   "dependencies": {
-    "zenny-ui-box": "^0.0.0",
-    "zenny-ui-button": "^0.0.0"
+    "@zenny-ui/box": "^0.0.0",
+    "@zenny-ui/button": "^0.0.0"
   }
 }

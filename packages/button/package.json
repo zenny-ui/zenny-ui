@@ -1,5 +1,5 @@
 {
-  "name": "zenny-ui-button",
+  "name": "@zenny-ui/button",
   "version": "0.0.0",
   "description": "An interactive element that accepts click based user input",
   "main": "dist/cjs/index.js",
@@ -19,8 +19,8 @@
     "dev": "tsc --watch"
   },
   "dependencies": {
-    "zenny-ui-box": "^0.0.0",
-    "zenny-ui-core": "^0.0.0",
-    "zenny-ui-variants": "^0.0.0"
+    "@zenny-ui/box": "^0.0.0",
+    "@zenny-ui/core": "^0.0.0",
+    "@zenny-ui/variants": "^0.0.0"
   }
 }

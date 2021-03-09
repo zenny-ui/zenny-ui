@@ -1,4 +1,4 @@
-import { variant } from "styled-system";
+import { variant } from "./variant";
 
 export type BrandProp = "primary" | "secondary";
 export type StateProp = "success" | "message" | "warning" | "danger";
@@ -10,29 +10,29 @@ export const appearanceVariants = variant({
     // Brand Variants
     primary: {
       color: "white",
-      bg: "teal",
+      backgroundColor: "teal",
     },
     secondary: {
       color: "white",
-      bg: "purple",
+      backgroundColor: "purple",
     },
 
     // State Variants
     success: {
       color: "white",
-      bg: "green",
+      backgroundColor: "red",
     },
     message: {
       color: "white",
-      bg: "blue",
+      backgroundColor: "blue",
     },
     warning: {
       color: "white",
-      bg: "yellow",
+      backgroundColor: "yellow",
     },
     danger: {
       color: "white",
-      bg: "red",
+      backgroundColor: "red",
     },
   },
 });

@@ -1,5 +1,5 @@
 {
-  "name": "zenny-ui-box",
+  "name": "@zenny-ui/box",
   "version": "0.0.0",
   "description": "Base component that acts like a super powered div",
   "keywords": [
@@ -31,6 +31,6 @@
     "url": "https://github.com/whoisryosuke/design-systems-monorepo/issues"
   },
   "dependencies": {
-    "zenny-ui-core": "^0.0.0"
+    "@zenny-ui/core": "^0.0.0"
   }
 }

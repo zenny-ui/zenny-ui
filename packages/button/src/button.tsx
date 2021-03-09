@@ -1,14 +1,12 @@
 import React from "react";
-// Ignore because SC type pkg is broken for now
-// @ts-ignore
 import styled from "styled-components";
-import { Box, Assign, BoxOwnProps } from "zenny-ui-box";
+import { Box, Assign, BoxOwnProps } from "@zenny-ui/box";
 import {
   SizeProp,
   sizeVariants,
   AppearanceProp,
   appearanceVariants,
-} from "zenny-ui-variants";
+} from "@zenny-ui/variants";
 
 export interface ButtonProps
   extends Assign<React.ComponentPropsWithRef<"button">, BoxOwnProps> {
@@ -24,7 +22,7 @@ export const Button = styled(Box).attrs(() => ({
   {
     appearance: "none",
     fontFamily: "inherit",
-    backgroundColor: "teal",
+    backgroundColor: 'teal',
   },
   sizeVariants,
   appearanceVariants

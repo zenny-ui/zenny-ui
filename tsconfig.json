@@ -17,7 +17,13 @@
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
     "baseUrl": "./",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+
+    "paths": {
+      "@zenny-ui/*": [
+        "packages/*"
+      ],
+    }
   },
   "exclude": [
     "node_modules",

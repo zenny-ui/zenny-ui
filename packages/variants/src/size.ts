@@ -1,4 +1,4 @@
-import { variant } from "styled-system";
+import { variant } from "./variant";
 
 export type SizeProp = "xs" | "small" | "medium" | "large" | "xl";
 

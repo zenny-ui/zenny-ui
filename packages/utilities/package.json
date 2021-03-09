@@ -1,15 +1,13 @@
 {
-  "name": "@zenny-ui/theme",
+  "name": "@zenny-ui/utilities",
   "version": "0.0.0",
-  "description": "The default theme and theme provider component for Zenny UI",
+  "description": "Utilities required by most packages",
   "keywords": [
-    "theme",
-    "theme-provider",
-    "component",
-    "css-in-js"
+    "utilities",
+    "styled-components"
   ],
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
-  "homepage": "https://github.com/whoisryosuke/zenny-ui#readme",
+  "homepage": "https://github.com/whoisryosuke/design-systems-monorepo#readme",
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/whoisryosuke/zenny-ui.git"
+    "url": "git+https://github.com/whoisryosuke/design-systems-monorepo.git"
   },
   "scripts": {
     "build": "concurrently yarn:build:*",
@@ -30,6 +28,9 @@
     "dev": "tsc --watch"
   },
   "bugs": {
-    "url": "https://github.com/whoisryosuke/zenny-ui/issues"
+    "url": "https://github.com/whoisryosuke/design-systems-monorepo/issues"
+  },
+  "dependencies": {
+    "@zenny-ui/core": "^0.0.0"
   }
 }

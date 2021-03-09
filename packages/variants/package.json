@@ -1,5 +1,5 @@
 {
-  "name": "zenny-ui-variants",
+  "name": "@zenny-ui/variants",
   "version": "0.0.0",
   "description": "Variant styles shared across components",
   "keywords": [
@@ -33,6 +33,9 @@
     "url": "https://github.com/whoisryosuke/design-systems-monorepo/issues"
   },
   "dependencies": {
-    "zenny-ui-core": "^0.0.0"
+    "@zenny-ui/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "csstype": "^3.0.7"
   }
 }
