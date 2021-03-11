@@ -2,19 +2,20 @@
   "name": "zenny-ui-button",
   "version": "0.0.0",
   "description": "An interactive element that accepts click based user input",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "author": "Ryosuke",
+  "license": "MIT",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
-  "author": "Ryosuke",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whoisryosuke/design-systems-monorepo.git"
+  },
   "scripts": {
     "build": "concurrently yarn:build:*",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:cjs": "tsc",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "dev": "tsc --watch"
   },

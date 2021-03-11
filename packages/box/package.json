@@ -9,10 +9,8 @@
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
   "homepage": "https://github.com/whoisryosuke/design-systems-monorepo#readme",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
-  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -22,8 +20,7 @@
   },
   "scripts": {
     "build": "concurrently yarn:build:*",
-    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "build:cjs": "tsc",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir dist/types",
     "dev": "tsc --watch"
   },
