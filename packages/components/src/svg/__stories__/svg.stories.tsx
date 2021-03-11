@@ -1,5 +1,5 @@
 import React from "react";
-import { SVG } from "../src/svg";
+import { SVG } from "../svg";
 import { FiArrowDownCircle } from "react-icons/fi";
 
 export default {

@@ -7,7 +7,7 @@ import {
   appearanceFillVariants,
   appearanceColorVariants,
 } from "zenny-ui-variants";
-import { Box, Assign, BoxOwnProps } from "zenny-ui-box";
+import { Box, Assign, BoxOwnProps } from "../box";
 
 export interface SVGProps
   extends Assign<React.ComponentProps<"svg">, BoxOwnProps> {

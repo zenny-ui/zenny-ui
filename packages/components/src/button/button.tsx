@@ -2,7 +2,7 @@ import React from "react";
 // Ignore because SC type pkg is broken for now
 // @ts-ignore
 import styled from "styled-components";
-import { Box, Assign, BoxOwnProps } from "zenny-ui-box";
+import { Box, Assign, BoxOwnProps } from "../box";
 import {
   SizeProp,
   sizeVariants,

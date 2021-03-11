@@ -1,7 +1,7 @@
 import React from "react";
 // Ignore because SC type pkg is broken for now
 // @ts-ignore
-import { Alert } from "../src/alert";
+import { Alert } from "../alert";
 
 export default {
   title: "Alert",

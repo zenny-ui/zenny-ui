@@ -3,8 +3,8 @@ import React from "react";
 // @ts-ignore
 import styled from "styled-components";
 import { AppearanceProp, appearanceVariants } from "zenny-ui-variants";
-import { Box, Assign, BoxOwnProps } from "zenny-ui-box";
-import { SVG } from "zenny-ui-svg";
+import { Box, Assign, BoxOwnProps } from "../box";
+import { SVG } from "../svg";
 import { DangerIcon, WarningIcon, MessageIcon, SuccessIcon } from "./icons";
 
 export interface StyledAlertProps
