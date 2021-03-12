@@ -27,7 +27,8 @@
     "dist",
     "lib",
     "**/*.spec.ts",
-    "**/*.stories.[tj]sx",
+    "**/*.stories.tsx",
+    "**/*.stories.jsx",
     "**/*.test.[tj]s"
   ]
 }

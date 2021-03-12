@@ -31,7 +31,9 @@
     "url": "https://github.com/whoisryosuke/design-systems-monorepo/issues"
   },
   "dependencies": {
-    "zenny-ui-box": "^0.0.0",
-    "zenny-ui-button": "^0.0.0"
+    "react-icons": "^4.2.0",
+    "zenny-ui-core": "^0.0.0",
+    "zenny-ui-theme": "^0.0.0",
+    "zenny-ui-variants": "^0.0.0"
   }
 }
