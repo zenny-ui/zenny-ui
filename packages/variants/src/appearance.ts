@@ -1,38 +1,38 @@
-import { variant } from "./variant";
+import { variant } from './variant';
 
-export type BrandProp = "primary" | "secondary";
-export type StateProp = "success" | "message" | "warning" | "danger";
+export type BrandProp = 'primary' | 'secondary';
+export type StateProp = 'success' | 'message' | 'warning' | 'danger';
 export type AppearanceProp = BrandProp | StateProp;
 
 export const appearanceVariants = variant({
-  prop: "appearance",
+  prop: 'appearance',
   variants: {
     // Brand Variants
     primary: {
-      color: "white",
-      backgroundColor: "teal",
+      color: 'white',
+      backgroundColor: 'teal',
     },
     secondary: {
-      color: "white",
-      backgroundColor: "purple",
+      color: 'white',
+      backgroundColor: 'purple',
     },
 
     // State Variants
     success: {
-      color: "white",
-      backgroundColor: "red",
+      color: 'white',
+      backgroundColor: 'red',
     },
     message: {
-      color: "white",
-      backgroundColor: "blue",
+      color: 'white',
+      backgroundColor: 'blue',
     },
     warning: {
-      color: "white",
-      backgroundColor: "yellow",
+      color: 'white',
+      backgroundColor: 'yellow',
     },
     danger: {
-      color: "white",
-      backgroundColor: "red",
+      color: 'white',
+      backgroundColor: 'red',
     },
   },
 });
@@ -40,28 +40,28 @@ export const appearanceVariants = variant({
 // We create a separate variant prop for SVGs
 // to set the fill attribute alone - since BG stacks
 export const appearanceFillVariants = variant({
-  prop: "appearanceFill",
+  prop: 'appearanceFill',
   variants: {
     // Brand Variants
     primary: {
-      fill: "teal",
+      fill: 'teal',
     },
     secondary: {
-      fill: "purple",
+      fill: 'purple',
     },
 
     // State Variants
     success: {
-      fill: "green",
+      fill: 'green',
     },
     message: {
-      fill: "blue",
+      fill: 'blue',
     },
     warning: {
-      fill: "yellow",
+      fill: 'yellow',
     },
     danger: {
-      fill: "red",
+      fill: 'red',
     },
   },
 });
@@ -70,28 +70,28 @@ export const appearanceFillVariants = variant({
 // the color instead of fill to support stroked SVG
 // As well as things like colored text
 export const appearanceColorVariants = variant({
-  prop: "appearanceColor",
+  prop: 'appearanceColor',
   variants: {
     // Brand Variants
     primary: {
-      color: "teal",
+      color: 'teal',
     },
     secondary: {
-      color: "purple",
+      color: 'purple',
     },
 
     // State Variants
     success: {
-      color: "green",
+      color: 'green',
     },
     message: {
-      color: "blue",
+      color: 'blue',
     },
     warning: {
-      color: "yellow",
+      color: 'yellow',
     },
     danger: {
-      color: "red",
+      color: 'red',
     },
   },
 });

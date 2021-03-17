@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 // Ignore because SC type pkg is broken for now
 // @ts-ignore
-import styled from "styled-components";
+import styled from 'styled-components';
 import {
   compose,
   typography,
@@ -9,8 +9,8 @@ import {
   layout,
   SpaceProps,
   ColorProps,
-} from "styled-system";
-import { color, spacing, position, PositionProps } from "@zenny-ui/utilities"
+} from 'styled-system';
+import { color, spacing, position, PositionProps } from '@zenny-ui/utilities';
 
 export type Assign<T, U> = {
   [P in keyof (T & U)]: P extends keyof T
@@ -25,20 +25,19 @@ export interface BoxOwnProps extends PositionProps {
   variant?: string;
 }
 export interface BoxProps
-  extends Assign<React.ComponentProps<"div">, BoxOwnProps> {}
+  extends Assign<React.ComponentProps<'div'>, BoxOwnProps> {}
 
-export const Box = styled("div").withConfig({
+export const Box = styled('div').withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
-      !['width', 'color'].includes(prop)
-      && defaultValidatorFn(prop),
+    !['width', 'color'].includes(prop) && defaultValidatorFn(prop),
 })<BoxProps>(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     margin: 0,
     minWidth: 0,
   },
   compose(typography),
   color,
   spacing,
-  position
+  position,
 );

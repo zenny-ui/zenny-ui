@@ -4,26 +4,26 @@ import CSS from 'csstype';
  * A "variant" of CSS styles.
  */
 export type VariantType = {
-    [key: string]: CSS.Properties
-}
+  [key: string]: CSS.Properties;
+};
 
 /**
  * Config for creating variants using utility function
  */
 export type VariantConfig = {
-    prop: string;
-    variants?: VariantType
-}
+  prop: string;
+  variants?: VariantType;
+};
 
 // Theme only needs variant, and that's not even required
 export type StyledVariantTheme = {
-    variants?: VariantType
-}
+  variants?: VariantType;
+};
 
 // All we need is theme prop from props Styled Components pass
 export type StyledProps = {
-    theme?: StyledVariantTheme
-}
+  theme?: StyledVariantTheme;
+};
 
 /**
  * Create variant based off user config + override with theme
@@ -39,7 +39,7 @@ export const variant = ({ prop, variants }: VariantConfig) => {
     // Combine with preset variants
     const variantCache = {
       ...variants,
-      ...themeVariants
+      ...themeVariants,
     };
     // Check what variant "key" the user passed
     const variantKey = styledProps[prop];
@@ -51,4 +51,4 @@ export const variant = ({ prop, variants }: VariantConfig) => {
   };
 };
 
-export default variant
+export default variant;

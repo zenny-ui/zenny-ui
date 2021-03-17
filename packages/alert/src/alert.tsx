@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 // Ignore because SC type pkg is broken for now
 // @ts-ignore
-import styled from "styled-components";
-import { AppearanceProp, appearanceVariants } from "@zenny-ui/variants";
-import { Box, Assign, BoxOwnProps } from "@zenny-ui/box";
-import { SVG } from "@zenny-ui/svg";
-import { DangerIcon, WarningIcon, MessageIcon, SuccessIcon } from "./icons";
+import styled from 'styled-components';
+import { AppearanceProp, appearanceVariants } from '@zenny-ui/variants';
+import { Box, Assign, BoxOwnProps } from '@zenny-ui/box';
+import { SVG } from '@zenny-ui/svg';
+import { DangerIcon, WarningIcon, MessageIcon, SuccessIcon } from './icons';
 
 export interface StyledAlertProps
-  extends Assign<React.ComponentPropsWithRef<"div">, BoxOwnProps> {
+  extends Assign<React.ComponentPropsWithRef<'div'>, BoxOwnProps> {
   appearance?: AppearanceProp;
 }
 
 const StyledAlert = styled(Box)<StyledAlertProps>(
   {
-    fontFamily: "inherit",
-    backgroundColor: "teal",
+    fontFamily: 'inherit',
+    backgroundColor: 'teal',
   },
-  appearanceVariants
+  appearanceVariants,
 );
 
 export interface AlertProps {
@@ -28,22 +28,22 @@ export interface AlertProps {
 
 export const Alert = ({
   icon,
-  appearance = "message",
+  appearance = 'message',
   children,
   ...rest
 }: AlertProps) => {
   const getStatusIcon = (name: AppearanceProp) => {
     switch (name) {
-      case "danger":
+      case 'danger':
         return DangerIcon;
 
-      case "warning":
+      case 'warning':
         return WarningIcon;
 
-      case "success":
+      case 'success':
         return SuccessIcon;
 
-      case "message":
+      case 'message':
         return MessageIcon;
 
       default:

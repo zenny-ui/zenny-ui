@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
   FiXOctagon,
   FiCheckCircle,
   FiFlag,
   FiMessageCircle,
-} from "react-icons/fi";
-import { SVG } from "@zenny-ui/svg";
+} from 'react-icons/fi';
+import { SVG } from '@zenny-ui/svg';
 
 export const DangerIcon = () => <SVG as={FiXOctagon} color="white" />;
 export const WarningIcon = () => <SVG as={FiFlag} color="white" />;
