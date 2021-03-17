@@ -14,17 +14,33 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "esnext",
+    "module": "esnext",
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
     "baseUrl": "./",
     "moduleResolution": "node",
+    "composite": true,
 
     "paths": {
       "@zenny-ui/*": [
-        "packages/*"
+        "packages/*/src"
       ],
     }
   },
+  "references": [
+    {
+      "path": "packages/variants"
+    },
+    {
+      "path": "packages/utilities"
+    },
+    {
+      "path": "packages/theme"
+    },
+    {
+      "path": "packages/box"
+    }
+  ],
   "exclude": [
     "node_modules",
     "dist",

@@ -3428,35 +3428,6 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@xstyled/core@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@xstyled/core/-/core-2.2.3.tgz#c156c0656cfc99286524af5643b1b87c3917c3ec"
-  integrity sha512-8QmQMwK5Z0LG6HTyun79P8ZkVQn0rn+vJbbJRR7afoQ9HWcDv89HgWkIcvXReDE/xGu2A/knV5uz6E9JygtqdQ==
-  dependencies:
-    "@xstyled/system" "^2.2.3"
-
-"@xstyled/styled-components@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@xstyled/styled-components/-/styled-components-2.2.3.tgz#34895a764b430a9597bdff8792643dd3e90033f2"
-  integrity sha512-jiYThlxbZNjzFbCUMslp/4doE3nRQn7m9qTZg/GmYSKIEGssJr16b1j3xX6beNI8j6t/2tVP3+pdMDsx6iPtUg==
-  dependencies:
-    "@xstyled/core" "^2.2.3"
-    "@xstyled/system" "^2.2.3"
-    "@xstyled/util" "^2.2.3"
-
-"@xstyled/system@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@xstyled/system/-/system-2.2.3.tgz#005c653391d572c567203ee4fc2c9e619531327c"
-  integrity sha512-2OM5BNYlUa+MimyvZ0RJ3xLm9F/ULcdyxRj3rhgSC59hUU28NscbMUm8ea4Lw2cdTgDTm9jj9xkva6D0h8tXfQ==
-  dependencies:
-    "@xstyled/util" "^2.2.3"
-    csstype "^3.0.6"
-
-"@xstyled/util@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@xstyled/util/-/util-2.2.3.tgz#d1e094e8dfc0b7bfaf80d7fcbbedb3efda4501ca"
-  integrity sha512-hOtlkeCBJlmvo4eHdNAgv2gJE3djXr1oOdmpBJj1knge0hIZj6kdWpTBp0h/Uzs/8xQndbUdewdfq2cRlHcIZA==
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -5496,7 +5467,7 @@ csstype@^2.2.0, csstype@^2.5.7:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.11.tgz#452f4d024149ecf260a852b025e36562a253ffc5"
   integrity sha512-l8YyEC9NBkSm783PFTvh0FmJy7s5pFKrDp49ZL7zBGX3fWkO+N4EEyan1qqp8cwPLDcD0OSdyY6hAMoxp34JFw==
 
-csstype@^3.0.2, csstype@^3.0.6, csstype@^3.0.7:
+csstype@^3.0.2, csstype@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.7.tgz#2a5fb75e1015e84dd15692f71e89a1450290950b"
   integrity sha512-KxnUB0ZMlnUWCsx2Z8MUsr6qV6ja1w9ArPErJaJaF8a5SOWoHLIszeCTKGRGRgtLgYrs1E8CHkNSP1VZTTPc9g==
