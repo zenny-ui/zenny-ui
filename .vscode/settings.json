@@ -1,8 +1,13 @@
 {
-    // Set the default
-    "editor.formatOnSave": true,
-    // Enable per-language
-    // "[javascript]": {
-    //     "editor.formatOnSave": true
-    // }
+  // Set the default
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  // Enable per-language
+  // "[javascript]": {
+  //     "editor.formatOnSave": true
+  // }
+
+  // Set default formatter to Prettier VSCode extension
+  // Same as going to Command Palette > Format Document With... > Set default
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
