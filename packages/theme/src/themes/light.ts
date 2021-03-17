@@ -28,11 +28,12 @@ export const colors = {
   primary: "#005CDD",
   secondary: "#6D59F0",
   muted: "#f6f6f9",
-  gray: "#D3D7DA",
   highlight: "hsla(205, 100%, 40%, 0.125)",
   white: "#FFF",
   black: "#111212",
-
+  gray: {
+    "100": "#D3D7DA",
+  },
   success: "green",
   message: "blue",
   warning: "yellow",

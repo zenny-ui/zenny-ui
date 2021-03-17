@@ -6,11 +6,11 @@ import {
   compose,
   typography,
   space,
-  color,
   layout,
   SpaceProps,
   ColorProps,
 } from "styled-system";
+import { color, spacing, position, PositionProps } from "@zenny-ui/utilities"
 
 export type Assign<T, U> = {
   [P in keyof (T & U)]: P extends keyof T
@@ -20,18 +20,25 @@ export type Assign<T, U> = {
     : never;
 };
 
-export interface BoxOwnProps extends SpaceProps, ColorProps {
+export interface BoxOwnProps extends PositionProps {
   as?: React.ElementType;
   variant?: string;
 }
 export interface BoxProps
   extends Assign<React.ComponentProps<"div">, BoxOwnProps> {}
 
-export const Box = styled("div")<BoxProps>(
+export const Box = styled("div").withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+      !['width', 'color'].includes(prop)
+      && defaultValidatorFn(prop),
+})<BoxProps>(
   {
     boxSizing: "border-box",
     margin: 0,
     minWidth: 0,
   },
-  compose(typography, space, color, layout)
+  compose(typography),
+  color,
+  spacing,
+  position
 );

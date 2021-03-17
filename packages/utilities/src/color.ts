@@ -1,6 +1,10 @@
-import {getThemeValue } from "./getThemeValue"
+import {getNestedThemeValue } from "./getThemeValue"
+import CSS from 'csstype'
+
+export type ColorProps = {
+  color?: CSS.Properties['color'];
+}
 
 export const color = (styledProps: any) => {
-    // Get variants from theme if exist
-    return getThemeValue('color', styledProps)
+    return getNestedThemeValue('color', styledProps, '#000')
 };
