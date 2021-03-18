@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Assign, BoxOwnProps } from '@zenny-ui/box';
+import { Box, BoxProps } from '@zenny-ui/box';
 import {
   SizeProp,
   sizeVariants,
@@ -8,11 +8,11 @@ import {
   appearanceVariants,
 } from '@zenny-ui/variants';
 
-export interface ButtonProps
-  extends Assign<React.ComponentPropsWithRef<'button'>, BoxOwnProps> {
-  size?: SizeProp;
-  appearance?: AppearanceProp;
-}
+export type ButtonProps = React.ComponentPropsWithRef<'button'> &
+  BoxProps & {
+    size?: SizeProp;
+    appearance?: AppearanceProp;
+  };
 
 export const Button = styled(Box).attrs(() => ({
   // Define props on top of Box

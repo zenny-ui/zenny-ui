@@ -20,12 +20,6 @@ const spacingKeyBank = {
 };
 
 export const position = (styledProps: any) => {
-  // We need to check if user passes any props that match
-  // margin, marginTop, mt, etc
-  // padding, paddingTop, pt, etc
-  // Figure out what the key is for (margin/padding)
-  // Return appropriate value from theme
-
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
     return spacingKeyBank[prop].map((propName: string) =>

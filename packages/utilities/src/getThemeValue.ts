@@ -1,6 +1,7 @@
 /**
  * Get a nested theme value using dot separator (1 level deep)
  * e.g. color="primary.100" -> theme.colors.primary['100']
+ * Will always add a "s" to the propName to access the theme
  * @param propName - Prop to target (e.g. "color")
  * @param props - Component props
  * @param defaultValue - Fallback value
@@ -13,10 +14,10 @@ export const getNestedThemeValue = (
   defaultValue: string | number,
 ) => {
   // Take the user prop and split it if possible, or return array to loop over
-  //@ts-ignore
   const splitProps =
     typeof props[propName] === 'string'
-      ? props[propName].split('.')
+      ? // @ts-ignore
+        props[propName].split('.')
       : [props[propName]];
 
   // Loop over array and walk through theme prop with each array item as a key
@@ -56,7 +57,7 @@ const parseValue = (type = 'none', prop: string | number, theme: any) => {
 
 /**
  * Generates responsive styles with CSS media queries based on array used in specifed prop.
- * Uses the breakpoints in the theme. First value in array corresponds to first breakpoint theme.
+ * Uses the breakpoints in the theme. First value in array corresponds to first breakpoint in theme.
  * @param propName The prop to get user input from (e.g. "width")
  * @param prop The prop value. Can be single value or array.
  * @param theme The theme from props

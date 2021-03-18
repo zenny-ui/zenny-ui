@@ -3,14 +3,13 @@ import React from 'react';
 // @ts-ignore
 import styled from 'styled-components';
 import { AppearanceProp, appearanceVariants } from '@zenny-ui/variants';
-import { Box, Assign, BoxOwnProps } from '@zenny-ui/box';
+import { Box, BoxProps } from '@zenny-ui/box';
 import { SVG } from '@zenny-ui/svg';
 import { DangerIcon, WarningIcon, MessageIcon, SuccessIcon } from './icons';
 
-export interface StyledAlertProps
-  extends Assign<React.ComponentPropsWithRef<'div'>, BoxOwnProps> {
+export type StyledAlertProps = BoxProps & {
   appearance?: AppearanceProp;
-}
+};
 
 const StyledAlert = styled(Box)<StyledAlertProps>(
   {
@@ -21,7 +20,7 @@ const StyledAlert = styled(Box)<StyledAlertProps>(
 );
 
 export interface AlertProps {
-  icon?: React.ReactNode;
+  icon?: React.ElementType;
   children: React.ReactNode;
   appearance?: AppearanceProp;
 }

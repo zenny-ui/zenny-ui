@@ -18,6 +18,7 @@
     "publish": "lerna run build && lerna publish",
     "format": "prettier --write \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
     "lint:format": "prettier \"packages/**/src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:types": "tsc --noEmit -p tsconfig.json --skipLibCheck",
     "commit": "git-cz",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

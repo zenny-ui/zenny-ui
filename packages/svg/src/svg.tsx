@@ -7,13 +7,13 @@ import {
   appearanceFillVariants,
   appearanceColorVariants,
 } from '@zenny-ui/variants';
-import { Box, Assign, BoxOwnProps } from '@zenny-ui/box';
+import { Box, BoxProps } from '@zenny-ui/box';
 
-export interface SVGProps
-  extends Assign<React.ComponentProps<'svg'>, BoxOwnProps> {
-  appearanceFill: AppearanceProp;
-  appearanceColor: AppearanceProp;
-}
+export type SVGProps = React.ComponentProps<'svg'> & {
+  as?: React.ElementType | any;
+  appearanceFill?: AppearanceProp;
+  appearanceColor?: AppearanceProp;
+};
 
 export const SVG = styled(Box).attrs(
   ({ as: Component, width, height, viewBox }: SVGProps) => ({

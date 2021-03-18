@@ -19,32 +19,16 @@
     "lib": ["dom", "es2015", "es2017"],
     "baseUrl": "./",
     "moduleResolution": "node",
-    "composite": true,
 
     "paths": {
-      "@zenny-ui/*": [
-        "packages/*/src"
-      ],
+      "@zenny-ui/*": ["packages/*/src"]
     }
   },
-  "references": [
-    {
-      "path": "packages/variants"
-    },
-    {
-      "path": "packages/utilities"
-    },
-    {
-      "path": "packages/theme"
-    },
-    {
-      "path": "packages/box"
-    }
-  ],
   "exclude": [
     "node_modules",
-    "dist",
-    "lib",
+    "**/dist",
+    "**/__stories__",
+    "**/__tests__",
     "**/*.spec.ts",
     "**/*.stories.[tj]sx",
     "**/*.test.[tj]s"
