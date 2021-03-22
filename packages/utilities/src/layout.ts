@@ -2,7 +2,6 @@ import { getResponsiveThemeValue } from './getThemeValue';
 import CSS from 'csstype';
 
 export type LayoutProps = {
-  margin?: CSS.Properties['margin'] | Array<CSS.Properties['margin']>;
   width?: CSS.Properties['width'] | Array<CSS.Properties['width']>;
   height?: CSS.Properties['height'] | Array<CSS.Properties['height']>;
   display?: CSS.Properties['display'] | Array<CSS.Properties['display']>;
@@ -19,28 +18,30 @@ export type LayoutProps = {
 };
 
 const layoutKeyBank = {
-  width: ['width'],
-  height: ['height'],
-  display: ['display'],
-  minWidth: ['minWidth'],
-  minHeight: ['minHeight'],
-  maxWidth: ['maxWidth'],
-  maxHeight: ['maxHeight'],
-  verticalAlign: ['verticalAlign'],
-  overflow: ['overflow'],
-  overflowX: ['overflowX'],
-  overflowY: ['overflowY'],
+  width: [{ name: 'width', type: 'space' }],
+  height: [{ name: 'height', type: 'space' }],
+  display: [{ name: 'display', type: 'none' }],
+  minWidth: [{ name: 'width', type: 'space' }],
+  maxWidth: [{ name: 'width', type: 'space' }],
+  minHeight: [{ name: 'height', type: 'space' }],
+  maxHeight: [{ name: 'height', type: 'space' }],
+  verticalAlign: [{ name: 'verticalAlign', type: 'none' }],
+  overflow: [{ name: 'overflow', type: 'none' }],
+  overflowX: [{ name: 'overflowX', type: 'none' }],
+  overflowY: [{ name: 'overflowY', type: 'none' }],
 };
 
 export const layout = (styledProps: any) => {
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
-    return layoutKeyBank[prop].map((propName: string) =>
+    return layoutKeyBank[
+      prop
+    ].map((propName: { name: string; type: 'space' | 'none' }) =>
       getResponsiveThemeValue(
-        propName,
+        propName.name,
         styledProps[prop],
         styledProps.theme,
-        'scale',
+        propName.type,
       ),
     );
   };

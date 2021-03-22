@@ -20,20 +20,29 @@ export type TypographyProps = {
 };
 
 const spacingKeyBank = {
-  fontFamily: ['fontFamily'],
-  fontSize: ['fontSize'],
-  fontWeight: ['fontWeight'],
-  lineHeight: ['lineHeight'],
-  letterSpacing: ['letterSpacing'],
-  textAlign: ['textAlign'],
-  fontStyle: ['fontStyle'],
+  fontFamily: [{ name: 'fontFamily', type: 'none', token: 'fonts' }],
+  fontSize: [{ name: 'fontSize', type: 'fontSize' }],
+  fontWeight: [{ name: 'fontWeight', type: 'none' }],
+  lineHeight: [{ name: 'lineHeight', type: 'none' }],
+  letterSpacing: [{ name: 'letterSpacing', type: 'none' }],
+  textAlign: [{ name: 'textAlign', type: 'none' }],
+  fontStyle: [{ name: 'fontStyle', type: 'none' }],
 };
 
 export const typography = (styledProps: any) => {
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
-    return spacingKeyBank[prop].map((propName: string) =>
-      getResponsiveThemeValue(propName, styledProps[prop], styledProps.theme),
+    return spacingKeyBank[
+      prop
+    ].map(
+      (propName: { name: string; type: 'space' | 'none'; token?: string }) =>
+        getResponsiveThemeValue(
+          propName.name,
+          styledProps[prop],
+          styledProps.theme,
+          propName.type,
+          propName.token ?? '',
+        ),
     );
   };
 

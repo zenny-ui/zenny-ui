@@ -1,4 +1,4 @@
-import { getResponsiveThemeValue } from './getThemeValue';
+import { getResponsiveThemeValue, getResponsiveValue } from './getThemeValue';
 import CSS from 'csstype';
 
 export type GridProps = {
@@ -50,12 +50,7 @@ export const grid = (styledProps: any) => {
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
     return gridKeyBank[prop].map((propName: string) =>
-      getResponsiveThemeValue(
-        propName,
-        styledProps[prop],
-        styledProps.theme,
-        'scale',
-      ),
+      getResponsiveValue(propName, styledProps[prop], styledProps.theme),
     );
   };
 

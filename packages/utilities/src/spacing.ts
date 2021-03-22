@@ -2,44 +2,126 @@ import { getResponsiveThemeValue } from './getThemeValue';
 import CSS from 'csstype';
 
 export type SpacingProps = {
-  margin?: CSS.Properties['margin'] | Array<CSS.Properties['margin']>;
-  marginTop?: CSS.Properties['marginTop'] | Array<CSS.Properties['marginTop']>;
+  margin?:
+    | CSS.Properties['margin']
+    | Array<CSS.Properties['margin']>
+    | number
+    | number[];
+  marginTop?:
+    | CSS.Properties['marginTop']
+    | Array<CSS.Properties['marginTop']>
+    | number
+    | number[];
   marginBottom?:
     | CSS.Properties['marginBottom']
-    | Array<CSS.Properties['marginBottom']>;
+    | Array<CSS.Properties['marginBottom']>
+    | number
+    | number[];
   marginLeft?:
     | CSS.Properties['marginLeft']
-    | Array<CSS.Properties['marginLeft']>;
+    | Array<CSS.Properties['marginLeft']>
+    | number
+    | number[];
   marginRight?:
     | CSS.Properties['marginRight']
-    | Array<CSS.Properties['marginRight']>;
-  m?: CSS.Properties['margin'] | Array<CSS.Properties['margin']>;
-  mt?: CSS.Properties['marginTop'] | Array<CSS.Properties['marginTop']>;
-  mb?: CSS.Properties['marginBottom'] | Array<CSS.Properties['marginBottom']>;
-  ml?: CSS.Properties['marginLeft'] | Array<CSS.Properties['marginLeft']>;
-  mr?: CSS.Properties['marginRight'] | Array<CSS.Properties['marginRight']>;
-  mx?: CSS.Properties['margin'] | Array<CSS.Properties['margin']>;
-  my?: CSS.Properties['margin'] | Array<CSS.Properties['margin']>;
-  padding?: CSS.Properties['padding'] | Array<CSS.Properties['padding']>;
+    | Array<CSS.Properties['marginRight']>
+    | number
+    | number[];
+  m?:
+    | CSS.Properties['margin']
+    | Array<CSS.Properties['margin']>
+    | number
+    | number[];
+  mt?:
+    | CSS.Properties['marginTop']
+    | Array<CSS.Properties['marginTop']>
+    | number
+    | number[];
+  mb?:
+    | CSS.Properties['marginBottom']
+    | Array<CSS.Properties['marginBottom']>
+    | number
+    | number[];
+  ml?:
+    | CSS.Properties['marginLeft']
+    | Array<CSS.Properties['marginLeft']>
+    | number
+    | number[];
+  mr?:
+    | CSS.Properties['marginRight']
+    | Array<CSS.Properties['marginRight']>
+    | number
+    | number[];
+  mx?:
+    | CSS.Properties['margin']
+    | Array<CSS.Properties['margin']>
+    | number
+    | number[];
+  my?:
+    | CSS.Properties['margin']
+    | Array<CSS.Properties['margin']>
+    | number
+    | number[];
+  padding?:
+    | CSS.Properties['padding']
+    | Array<CSS.Properties['padding']>
+    | number
+    | number[];
   paddingTop?:
     | CSS.Properties['paddingTop']
-    | Array<CSS.Properties['paddingTop']>;
+    | Array<CSS.Properties['paddingTop']>
+    | number
+    | number[];
   paddingBottom?:
     | CSS.Properties['paddingBottom']
-    | Array<CSS.Properties['paddingBottom']>;
+    | Array<CSS.Properties['paddingBottom']>
+    | number
+    | number[];
   paddingLeft?:
     | CSS.Properties['paddingLeft']
-    | Array<CSS.Properties['paddingLeft']>;
+    | Array<CSS.Properties['paddingLeft']>
+    | number
+    | number[];
   paddingRight?:
     | CSS.Properties['paddingRight']
-    | Array<CSS.Properties['paddingRight']>;
-  p?: CSS.Properties['padding'] | Array<CSS.Properties['padding']>;
-  pt?: CSS.Properties['paddingTop'] | Array<CSS.Properties['paddingTop']>;
-  pb?: CSS.Properties['paddingBottom'] | Array<CSS.Properties['paddingBottom']>;
-  pl?: CSS.Properties['paddingLeft'] | Array<CSS.Properties['paddingLeft']>;
-  pr?: CSS.Properties['paddingRight'] | Array<CSS.Properties['paddingRight']>;
-  px?: CSS.Properties['padding'] | Array<CSS.Properties['padding']>;
-  py?: CSS.Properties['padding'] | Array<CSS.Properties['padding']>;
+    | Array<CSS.Properties['paddingRight']>
+    | number
+    | number[];
+  p?:
+    | CSS.Properties['padding']
+    | Array<CSS.Properties['padding']>
+    | number
+    | number[];
+  pt?:
+    | CSS.Properties['paddingTop']
+    | Array<CSS.Properties['paddingTop']>
+    | number
+    | number[];
+  pb?:
+    | CSS.Properties['paddingBottom']
+    | Array<CSS.Properties['paddingBottom']>
+    | number
+    | number[];
+  pl?:
+    | CSS.Properties['paddingLeft']
+    | Array<CSS.Properties['paddingLeft']>
+    | number
+    | number[];
+  pr?:
+    | CSS.Properties['paddingRight']
+    | Array<CSS.Properties['paddingRight']>
+    | number
+    | number[];
+  px?:
+    | CSS.Properties['padding']
+    | Array<CSS.Properties['padding']>
+    | number
+    | number[];
+  py?:
+    | CSS.Properties['padding']
+    | Array<CSS.Properties['padding']>
+    | number
+    | number[];
 };
 
 const spacingKeyBank = {
@@ -83,7 +165,7 @@ export const spacing = (styledProps: any) => {
         propName,
         styledProps[prop],
         styledProps.theme,
-        'scale',
+        'space',
       ),
     );
   };

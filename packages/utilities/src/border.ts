@@ -1,4 +1,4 @@
-import { getResponsiveThemeValue } from './getThemeValue';
+import { getResponsiveThemeValue, getResponsiveValue } from './getThemeValue';
 import CSS from 'csstype';
 
 export type BorderProps = {
@@ -78,45 +78,60 @@ export type BorderProps = {
 };
 
 const borderKeyBank = {
-  border: ['border'],
-  borderWidth: ['borderWidth'],
-  borderStyle: ['borderStyle'],
-  borderColor: ['borderColor'],
-  borderRadius: ['borderRadius'],
-  borderTop: ['borderTop'],
-  borderTopWidth: ['borderTopWidth'],
-  borderTopStyle: ['borderTopStyle'],
-  borderTopColor: ['borderTopColor'],
-  borderTopLeftRadius: ['borderTopLeftRadius'],
-  borderTopRightRadius: ['borderTopRightRadius'],
-  borderRight: ['borderRight'],
-  borderRightWidth: ['borderRightWidth'],
-  borderRightStyle: ['borderRightStyle'],
-  borderRightColor: ['borderRightColor'],
-  borderBottom: ['borderBottom'],
-  borderBottomWidth: ['borderBottomWidth'],
-  borderBottomStyle: ['borderBottomStyle'],
-  borderBottomColor: ['borderBottomColor'],
-  borderBottomLeftRadius: ['borderBottomLeftRadius'],
-  borderBottomRightRadius: ['borderBottomRightRadius'],
-  borderLeft: ['borderLeft'],
-  borderLeftWidth: ['borderLeftWidth'],
-  borderLeftStyle: ['borderLeftStyle'],
-  borderLeftColor: ['borderLeftColor'],
-  borderX: ['borderLeft', 'borderRight'],
-  borderY: ['borderTop', 'borderBottom'],
+  position: [{ name: 'position', type: 'none' }],
+  border: [{ name: 'border', type: 'none' }],
+  borderWidth: [{ name: 'borderWidth', type: 'space' }],
+  borderStyle: [{ name: 'borderStyle', type: 'none' }],
+  borderColor: [{ name: 'borderColor', type: 'none' }],
+  borderRadius: [{ name: 'borderRadius', type: 'none' }],
+  borderTop: [{ name: 'borderTop', type: 'none' }],
+  borderTopWidth: [{ name: 'borderTopWidth', type: 'space' }],
+  borderTopStyle: [{ name: 'borderTopStyle', type: 'none' }],
+  borderTopColor: [{ name: 'borderTopColor', type: 'none' }],
+  borderTopLeftRadius: [{ name: 'borderTopLeftRadius', type: 'none' }],
+  borderTopRightRadius: [{ name: 'borderTopRightRadius', type: 'none' }],
+  borderRight: [{ name: 'borderRight', type: 'none' }],
+  borderRightWidth: [{ name: 'borderRightWidth', type: 'space' }],
+  borderRightStyle: [{ name: 'borderRightStyle', type: 'none' }],
+  borderRightColor: [{ name: 'borderRightColor', type: 'none' }],
+  borderBottom: [{ name: 'borderBottom', type: 'none' }],
+  borderBottomWidth: [{ name: 'borderBottomWidth', type: 'space' }],
+  borderBottomStyle: [{ name: 'borderBottomStyle', type: 'none' }],
+  borderBottomColor: [{ name: 'borderBottomColor', type: 'none' }],
+  borderBottomLeftRadius: [{ name: 'borderBottomLeftRadius', type: 'none' }],
+  borderBottomRightRadius: [{ name: 'borderBottomRightRadius', type: 'none' }],
+  borderLeft: [{ name: 'borderLeft', type: 'none' }],
+  borderLeftWidth: [{ name: 'borderLeftWidth', type: 'space' }],
+  borderLeftStyle: [{ name: 'borderLeftStyle', type: 'none' }],
+  borderLeftColor: [{ name: 'borderLeftColor', type: 'none' }],
+  borderX: [
+    { name: 'borderLeft', type: 'space' },
+    { name: 'borderRight', type: 'space' },
+  ],
+  borderY: [
+    { name: 'borderTop', type: 'space' },
+    { name: 'borderBottom', type: 'space' },
+  ],
 };
 
 export const border = (styledProps: any) => {
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
-    return borderKeyBank[prop].map((propName: string) =>
-      getResponsiveThemeValue(
-        propName,
-        styledProps[prop],
-        styledProps.theme,
-        'scale',
-      ),
+    return borderKeyBank[prop].map(
+      (propName: { name: string; type: 'space' | 'none' }) => {
+        if (propName.type === 'none')
+          return getResponsiveValue(
+            propName.name,
+            styledProps[prop],
+            styledProps.theme,
+          );
+        getResponsiveThemeValue(
+          propName.name,
+          styledProps[prop],
+          styledProps.theme,
+          propName.type,
+        );
+      },
     );
   };
 

@@ -1,4 +1,4 @@
-import { getResponsiveThemeValue } from './getThemeValue';
+import { getResponsiveThemeValue, getResponsiveValue } from './getThemeValue';
 import CSS from 'csstype';
 
 export type BackgroundProps = {
@@ -27,12 +27,7 @@ export const background = (styledProps: any) => {
   // Grabs prop from theme and return object-style CSS
   const mapProp = (prop: string) => {
     return backgroundKeyBank[prop].map((propName: string) =>
-      getResponsiveThemeValue(
-        propName,
-        styledProps[prop],
-        styledProps.theme,
-        'scale',
-      ),
+      getResponsiveValue(propName, styledProps[prop], styledProps.theme),
     );
   };
 
