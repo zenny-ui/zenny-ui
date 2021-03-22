@@ -1,7 +1,15 @@
 import * as React from 'react';
-// Ignore because SC type pkg is broken for now
-// @ts-ignore
-import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import {
+  ThemeProvider as StyledThemeProvider,
+  createGlobalStyle,
+} from 'styled-components';
+import { generateCSSVars } from './utils/generateCSSVars';
+
+const CSSVars = createGlobalStyle`
+  :root{
+    ${({ theme }) => generateCSSVars(theme)}
+  }
+`;
 
 export interface ThemeProviderProps {
   children: React.ReactNode;
@@ -9,5 +17,10 @@ export interface ThemeProviderProps {
 }
 
 export const ThemeProvider = ({ theme, children }: ThemeProviderProps) => {
-  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
+  return (
+    <StyledThemeProvider theme={theme}>
+      <CSSVars />
+      {children}
+    </StyledThemeProvider>
+  );
 };

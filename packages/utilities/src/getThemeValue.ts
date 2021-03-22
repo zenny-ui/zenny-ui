@@ -1,3 +1,7 @@
+const generateCSSCustomProperty = (token: string, prop: string | number) => {
+  return `var(--zenny-${token}-${prop})`;
+};
+
 const parseNestedProp = (
   propName: string,
   prop: any,
@@ -5,6 +9,14 @@ const parseNestedProp = (
   token?: string,
 ) => {
   // Take the user prop and split it if possible, or return array to loop over
+  const parsedProp = typeof prop === 'string' ? prop.split('.') : [prop];
+
+  // Generate CSS custom property
+  // Take prop and convert dot notation to dashes
+  const dashProp = parsedProp.join('-');
+  const themeToken = token ?? propName;
+  const cssProp = generateCSSCustomProperty(themeToken, dashProp);
+
   const splitProps =
     typeof prop === 'string'
       ? // @ts-ignore
@@ -17,7 +29,7 @@ const parseNestedProp = (
   splitProps.forEach(
     (prop: string) => (propValue = propValue ? propValue[prop] : undefined),
   );
-  return propValue ?? prop;
+  return propValue ? cssProp : prop;
 };
 
 /**
@@ -68,12 +80,12 @@ const parseValue = (
   switch (type) {
     case 'space':
       return Number.isInteger(prop) && theme?.space?.[prop]
-        ? `${theme.space[prop]}px`
+        ? generateCSSCustomProperty('space', prop)
         : prop;
 
     case 'fontSize':
       return Number.isInteger(prop) && theme?.fontSizes?.[prop]
-        ? `${theme.fontSizes[prop]}px`
+        ? generateCSSCustomProperty('fontSizes', prop)
         : prop;
 
     case 'none':
