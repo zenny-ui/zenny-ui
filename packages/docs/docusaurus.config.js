@@ -1,8 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Zenny UI',
+  tagline: 'React component library with utility style props.',
+  url: 'https://zenny-ui.github.io/zenny-ui',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -11,9 +11,9 @@ module.exports = {
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Zenny UI',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Zenny UI Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -23,9 +23,9 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/zenny-ui/zenny-ui',
           label: 'GitHub',
           position: 'right',
         },
@@ -48,15 +48,15 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com/questions/tagged/zenny-ui',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discordapp.com/invite/zenny-ui',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/whoisryosuke',
             },
           ],
         },
@@ -69,12 +69,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/zenny-ui/zenny-ui',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ryosuke Hana. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -84,14 +84,13 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl: 'https://github.com/zenny-ui/zenny-ui/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/zenny-ui/zenny-ui/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
