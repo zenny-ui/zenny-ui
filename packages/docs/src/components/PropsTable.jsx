@@ -32,7 +32,7 @@ const PropsTable = ({ className, propMetaData, ...restProps }) => {
               )}
               {prop.defaultValue ? (
                 <td style={{ color: 'rgb(236, 171, 32)' }}>
-                  {prop.defaultValue}
+                  {prop.defaultValue.value}
                 </td>
               ) : (
                 <td style={{ color: '#c6c6c6' }}>none</td>
