@@ -108,9 +108,7 @@ const generateDocs = async () => {
     const mdxPath = path.join(DOCS_PATH, `${doc[0].displayName}.mdx`);
     console.log('✍️ creating file', mdxPath);
     const description = doc[0].description ? doc[0].description : undefined;
-    const propsTable = `import PropsTable from './PropsTable';
-
-# Props
+    const propsTable = `# Props
 
 <PropsTable
   propMetaData={${JSON.stringify(doc[0].props, null, 2)}} 
